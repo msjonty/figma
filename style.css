@@ -1,0 +1,474 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar styles */
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar-logo img {
+    width: 170px;
+    height: 37.29px;
+}
+
+.navbar-menu ul {
+    border-radius: 20px;
+    border: 1px;
+    padding: 16px 47px;
+    background-color: #efeff3;
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.navbar-menu a {
+    color:  #8987A1;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.navbar-menu a:hover {
+    color: #252432;
+}
+
+.navbar-auth {
+    display: flex;
+    gap: 15px;
+}
+
+.signin, .signup {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+.signin{
+    color: #8987A1;    ;
+}
+
+.signup {
+    background-color: #007BFF;
+    border: none;
+}
+
+.signup:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .navbar-menu ul {
+        display: none;
+    }
+
+    .navbar-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+    }
+
+    .navbar-menu ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-menu a {
+        color:  #8987A1;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar-menu.active {
+        display: flex;
+    }
+
+    .navbar-auth {
+        display: none;
+    }
+
+    .navbar-logo {
+        flex: 1;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        flex-direction: column;
+    }
+}
+/* Menu toggle styles */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+
+/* Home page content styles */
+.home-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.home-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.home-content h1 {
+    width: 764px;
+    font-size: 2.5rem;
+    border-radius: 10px;
+    opacity: 0.8;
+    margin-bottom: 20px;
+}
+
+.get-in-touch-btn {
+    width: 211px;
+    height: 60px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.get-in-touch-btn:hover {
+    background-color: #0056b3;
+}
+/* Responsive styles */
+@media (max-width: 768px) {
+    .home-content h1 {
+        font-size: 2rem;
+        width: 100%;
+    }
+
+    .get-in-touch-btn {
+        width: 180px;
+        height: 50px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-content h1 {
+        font-size: 1.5rem;
+        width: 100%;
+    }
+
+    .get-in-touch-btn {
+        width: 160px;
+        height: 45px;
+        font-size: 12px;
+    }
+}
+
+/* About page content styles */
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+    padding: 100px 20px; /* Added padding to account for the fixed navbar */
+}
+
+.about-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.what-we-do {
+    margin-bottom: 40px;
+}
+
+.what-we-do h2 {
+    font-size: 2.5rem;
+    opacity: 0.8;
+}
+
+.about-details {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.left-column,
+.right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cards-group-1,
+.cards-group-2 {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.card {
+    width: 280px;
+    height: 252px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.large-card {
+    width: 592px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tall-card {
+    width: 280px;
+    height: 536px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.text-and-image {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.text {
+    flex: 1;
+}
+
+.text-and-image img,
+.tall-card img {
+    width: 50%;
+    border-radius: 10px;
+}
+
+.icon {
+    background-color: #007BFF;
+    color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .large-card {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .text-and-image {
+        flex-direction: column;
+    }
+
+    .text-and-image img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-details {
+        flex-direction: column;
+    }
+
+    .cards-group-1,
+    .cards-group-2 {
+        flex-direction: column;
+    }
+
+    .card,
+    .large-card,
+    .tall-card {
+        width: 100%;
+    }
+
+    .tall-card {
+        height: auto;
+    }
+
+    .text-and-image img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .what-we-do h2 {
+        font-size: 1.5rem;
+    }
+}
+/* Carousel page content styles */
+.carousel-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+    padding: 100px 20px; /* Added padding to account for the fixed navbar */
+}
+
+.carousel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 40px;
+}
+
+.arrow {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.carousel-title {
+    text-align: center;
+    max-width: 500px;
+}
+
+.carousel-title h2 {
+    font-size: 2.5rem;
+    opacity: 0.8;
+    margin-bottom: 10px;
+}
+
+.carousel-title p {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+.carousel-images {
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .carousel-header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .arrow {
+        margin: 10px;
+    }
+
+    .carousel-title {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-title h2 {
+        font-size: 2rem;
+    }
+
+    .carousel-title p {
+        font-size: 0.9rem;
+    }
+
+    .carousel img {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-title h2 {
+        font-size: 1.5rem;
+    }
+
+    .carousel-title p {
+        font-size: 0.8rem;
+    }
+
+    .arrow {
+        width: 30px;
+        height: 30px;
+    }
+}
